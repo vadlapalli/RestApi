@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;in.hari._jackson_app.JacksonApp&apos; to &apos;Customer&apos;&#x0D;&#x0A;- Original project: &apos;22_jackson_app&apos;&#x0D;&#x0A;- Original element: &apos;in.hari._jackson_app.JacksonApp&apos;&#x0D;&#x0A;- Renamed element: &apos;in.hari._jackson_app.Customer&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;JacksonApp&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;in.hari._jackson_app{JacksonApp.java[JacksonApp" matchStrategy="1" name="Customer" qualified="false" references="true" similarDeclarations="false" stamp="1682839950321" textual="false" version="1.0"/>
+</session>

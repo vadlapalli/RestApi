@@ -1,0 +1,9 @@
+package in.springbootDataJpa.Repo;
+
+import org.springframework.data.repository.CrudRepository;
+
+import in.springbootDataJpa.Entity.BookEntity;
+
+public class BookRepo implements CrudRepository<BookEntity, Integer> {
+
+}

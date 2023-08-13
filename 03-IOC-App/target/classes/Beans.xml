@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="credit" class="io.spring.beans.CreditCardPtm" />
+        <bean id="debit" class="io.spring.beans.DebitCardPtm" />
+        <bean id="sodex" class="io.spring.beans.SodexCardPtm" />
+        <bean id="payment" class="io.spring.beans.PaymentService">
+        	<constructor-arg ref="debit"/>
+        	<property name="payment" ref="credit" />
+        </bean>
+        
+</beans>

@@ -1,0 +1,47 @@
+package in.blogapplication.services;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.blogapplication.bindings.LoginForm;
+import in.blogapplication.bindings.RegisterForm;
+import in.blogapplication.entities.UserDtls;
+import in.blogapplication.repositories.UserRepo;
+
+@Service
+public class UserServiceImpl implements UserService {
+	
+	@Autowired
+	private UserRepo userRepo;
+
+	@Override
+	public boolean registration(RegisterForm form) {
+		
+		//Check email is already available 
+		
+		UserDtls user=userRepo.findByEmail(form.getEmail());
+		
+		if(user != null) {
+			return false;
+		}
+		
+		//TODO copy details from form to object
+		UserDtls userEntity= new UserDtls();
+		BeanUtils.copyProperties(form, userEntity);
+		
+		//save details into db
+		userRepo.save(userEntity);
+		
+		
+		return true;
+	}
+	
+	@Override
+	public boolean login(LoginForm form) {
+		
+		
+		return false;
+	}
+
+}

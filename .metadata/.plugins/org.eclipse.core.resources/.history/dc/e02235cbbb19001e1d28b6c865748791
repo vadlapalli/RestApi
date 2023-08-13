@@ -1,0 +1,34 @@
+package in.springbootDataJpa;
+
+
+import java.util.Optional;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import in.springbootDataJpa.Entity.BookEntity;
+import in.springbootDataJpa.Repo.BookRepo;
+
+@SpringBootApplication
+public class Application {
+
+
+	public static void main(String[] args) {
+	ConfigurableApplicationContext	context =SpringApplication.run(Application.class, args);
+	BookRepo bean = context.getBean(BookRepo.class);
+	
+	BookEntity b=new BookEntity();
+	b.setBookId(101);
+	b.setBookName("Java");
+	b.setBookPrice(1500.00);
+	
+	bean.save(b);
+	
+	Optional<BookEntity> findById = bean.findById(101);
+	System.out.println(findById);
+		
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+package in.springbootDataJpa;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import in.springbootDataJpa.entity.Employee;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
+		EmployeeRepo repo = run.getBean(EmployeeRepo.class);
+		
+		Employee e1=new Employee(1, "Bhavani", 75000.00, "Fe-Male", "Architect");
+		Employee e2=new Employee(1, "Hari", 12500.00, "Male", "SM");
+		Employee e3=new Employee(1, "Babu", 165000.00, "Male", "CEO");
+		Employee e4=new Employee(1, "Vinitha", 25000.00, "Fe-Male", "CFO");
+		Employee e5=new Employee(1, "Srikanth", 45000.00, "Male", "TL");
+		Employee e6=new Employee(1, "Nehanth", 30000.00, "Male", "TM");
+		
+	}
+
+}

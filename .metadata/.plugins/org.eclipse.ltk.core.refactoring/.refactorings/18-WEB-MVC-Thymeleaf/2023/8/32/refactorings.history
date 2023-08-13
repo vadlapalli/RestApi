@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;18-WEB-MVC-Thymeleaf/src/main/resources/templates/products.html&apos; to &apos;view-products.html&apos;" description="Rename resource &apos;products.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/products.html" name="view-products.html" stamp="1691475264819" updateReferences="true"/>
+</session>

@@ -1,0 +1,52 @@
+package com.thproduct.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
+import com.thproduct.entity.Product;
+import com.thproduct.repo.ProductRepo;
+
+@Controller
+public class ProductController {
+
+	@Autowired
+	private ProductRepo repo;
+
+	@GetMapping("/")
+	public String getProductPage(Model model) {
+		
+		/*
+		 * p.setName("Hari"); p.setPrice(10000.0); p.setQty(3);
+		 */
+		model.addAttribute("product", new Product());
+		return "index";
+	}
+
+	@PostMapping("/save")
+	public String saveProductPage(Product p, Model model) {
+		p = repo.save(p);
+		if (p.getId() != null) {
+			model.addAttribute("msg", "Data saved Successfully");
+		}
+		return "index";
+	}
+	@GetMapping("/products")
+	public String getProducts(Model model) {
+		List<Product> findAll = repo.findAll();
+		findAll.forEach(System.out::println);
+		model.addAttribute("products", findAll);
+		return "products";
+	}
+	
+	@GetMapping("/edit")
+	public String editProducts() {
+		return "edit";
+	}
+
+}

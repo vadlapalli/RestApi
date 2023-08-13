@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.student.enquiries.RestController.java&apos; to &apos;CustomerRestController.java&apos;&#x0D;&#x0A;- Original project: &apos;23-REST_API&apos;&#x0D;&#x0A;- Original element: &apos;com.student.enquiries.RestController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.student.enquiries.CustomerRestController.java&apos;" description="Rename compilation unit &apos;RestController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.student.enquiries{RestController.java" name="CustomerRestController.java" references="false" stamp="1682842395096" version="1.0"/>
+</session>

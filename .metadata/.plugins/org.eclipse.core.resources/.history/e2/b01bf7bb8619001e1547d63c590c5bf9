@@ -1,0 +1,5 @@
+package in.springboot.beans;
+
+public class ReportDao {
+
+}

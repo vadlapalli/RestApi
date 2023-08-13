@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Index page</h2>
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text"></td>
+		</tr>
+	</table>
+</body>
+</html>

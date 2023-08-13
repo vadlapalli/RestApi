@@ -1,0 +1,9 @@
+1681115322673	Rename package 'com.example.demo'
+1681115350066	Rename package 'com.example.demo'
+1681124113150	Rename compilation unit 'CitizenPlane.java'
+1681127277710	Rename type 'CitizenPlaneRepository'
+1681146665566	Rename type 'RequestService'
+1681146697995	Rename type 'RequestServiceImpl'
+1681147046829	Rename type 'EmailUtil'
+1681152884277	Move file
+1681211803585	Extract method 'init'

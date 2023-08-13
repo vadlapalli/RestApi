@@ -1,0 +1,20 @@
+package com.exceptionhandling.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class DemoControllerr {
+	
+	
+	@GetMapping("/greet")
+	public String getGreetMsg() {
+		return "index";
+	}
+	
+	@GetMapping("/welcome")
+	public String getWwelcomeMsg() {
+		int a=10/0;
+		return "index";
+	}
+}

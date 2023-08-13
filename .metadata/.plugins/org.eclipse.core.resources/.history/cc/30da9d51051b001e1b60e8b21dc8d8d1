@@ -1,0 +1,10 @@
+package in.springbootDataJpa.impl;
+
+public class Biml implements A {
+
+	public void m1() {
+		
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;io.spring.Engine&apos; to &apos;IEngine&apos;&#x0D;&#x0A;- Original project: &apos;01_car_API&apos;&#x0D;&#x0A;- Original element: &apos;io.spring.Engine&apos;&#x0D;&#x0A;- Renamed element: &apos;io.spring.IEngine&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Engine&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;io.spring{Engine.java[Engine" matchStrategy="1" name="IEngine" qualified="false" references="true" similarDeclarations="false" stamp="1687936118989" textual="false" version="1.0"/>
+</session>

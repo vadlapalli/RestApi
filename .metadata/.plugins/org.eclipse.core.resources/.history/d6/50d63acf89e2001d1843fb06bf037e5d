@@ -1,0 +1,58 @@
+package com.student.enquiries.serviceimpl;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.student.enquiries.binding.SignUpForm;
+import com.student.enquiries.entities.Users;
+import com.student.enquiries.repositories.UserRepository;
+import com.student.enquiries.service.UserService;
+import com.student.enquiries.utils.EmailUtils;
+import com.student.enquiries.utils.PwdUtils;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepo;
+
+	//@Autowired
+	//private EmailUtils emailUtils;
+
+	@Override
+	public boolean signup(SignUpForm form) {
+		
+		Users user=	userRepo.findByEmail(form.getEmail());
+		
+		// TODO: copy the binding object data into entity
+		Users entity = new Users();
+		BeanUtils.copyProperties(form, entity);
+
+		// TODO: generate the random password
+		String tempPwd = PwdUtils.generateRandomPwd();
+		entity.setPassWord(tempPwd);
+
+		// TODO: set the account status as locked
+		entity.setAcctStatus("Locked");
+
+		// TODO: insert records
+
+		userRepo.save(entity);
+		// TODO: send email to unlock acct
+		
+		return false;
+
+		/*String to = form.getEmail();
+		String subject = "Unlock your account | ASHOK IT";
+		StringBuffer body = new StringBuffer();
+		body.append("<h1>Use below temporary password to unlock your account</h1>");
+		body.append("Temporary pwd:" + tempPwd);
+		body.append("</br>");
+		body.append("<a href=\"unlock?email =" + to + "\"> Click here to unlock your account");
+		emailUtils.sendEmail(to, subject, body.toString());
+
+		return false;*/
+	}
+
+}

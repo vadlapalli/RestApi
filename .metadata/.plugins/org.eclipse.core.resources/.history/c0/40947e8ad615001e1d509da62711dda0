@@ -1,0 +1,11 @@
+package io.spring;
+
+public class DebitCardPmt implements IPayment {
+
+	@Override
+	public boolean proccessPayment(double billAmt) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

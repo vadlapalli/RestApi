@@ -1,0 +1,43 @@
+package in.blogapplication.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import in.blogapplication.bindings.RegisterForm;
+import in.blogapplication.entities.UserDtls;
+import in.blogapplication.services.UserService;
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	private UserService userService;
+	
+	
+	@GetMapping("/register")
+	public String indexPage(Model model) {
+		model.addAttribute("user",new RegisterForm());
+		return "registrationPage";
+	}
+	
+	@PostMapping("/register")
+	public String indexPageHandler(@ModelAttribute("user")  RegisterForm form,Model model) {
+		boolean status=userService.registration(form);
+		if(status) {
+			model.addAttribute("succMsg", "Check Your Email");
+		}else {
+			model.addAttribute("errMsg", "Choose Unique Email");
+		}
+		return "registrationPage";
+	}
+	
+	@GetMapping("/login")
+	public String loginPage() {
+		return "loginPage";
+	}
+
+}

@@ -1,0 +1,5 @@
+package in.springbootDataJpa.impl;
+
+public class DataLoader {
+
+}
