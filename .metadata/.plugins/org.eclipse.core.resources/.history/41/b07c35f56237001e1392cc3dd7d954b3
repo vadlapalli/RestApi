@@ -1,5 +1,0 @@
-package com.exceptionhandling.aop;
-
-public class AppExceptionHandler {
-
-}
